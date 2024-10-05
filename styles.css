@@ -1,0 +1,229 @@
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+}
+
+header h1 {
+    margin: 0;
+    animation: slideIn 1.5s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    position: relative;
+    animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Gallery Styling */
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.gallery-item {
+    width: 200px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Organigram Styling */
+.organigram {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+.organigram ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    animation: zoomIn 1.2s ease;
+}
+
+.organigram li {
+    padding: 10px;
+    position: relative;
+    animation: fadeInUp 1s ease;
+}
+
+/* Remove the lines by ensuring no pseudo-elements are used */
+.organigram li:before, 
+.organigram li:after {
+    content: none;
+}
+
+.organigram li:before {
+    top: 0;
+    height: 100%;
+    border-left: 2px solid;
+}
+
+.organigram li:after {
+    top: 50%;
+    border-top: 2px solid;
+    width: 15px;
+}
+
+/* Keyframes for organigram */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Contact Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 1.2s ease;
+}
+
+form input, form textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1.2s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease;
+}
